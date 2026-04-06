@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Local/generated metadata not part of the Next app source.
+    ".sfdx/**",
   ]),
 ]);
 

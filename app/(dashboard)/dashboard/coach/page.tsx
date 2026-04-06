@@ -8,7 +8,6 @@ import SessionList from "@/components/dashboard/session-list";
 import TeamTable from "@/components/dashboard/team-table";
 import DemoActionButton from "@/components/shared/demo-action-button";
 import Badge from "@/components/ui/badge";
-import Button from "@/components/ui/button";
 import Card from "@/components/ui/card";
 import { COACH_DASHBOARD_DATA } from "@/lib/mock-data";
 
