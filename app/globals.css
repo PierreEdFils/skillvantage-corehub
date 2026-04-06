@@ -1,6 +1,13 @@
 @import "tailwindcss";
 
 @theme {
+  --color-brand-blue: #1b5f9d;
+  --color-brand-blueLight: #d9eaf7;
+  --color-brand-navy: #0b1736;
+  --color-brand-orange: #ff6b00;
+  --color-brand-orangeHover: #e85c00;
+  --color-brand-border: #dbe4f0;
+  --color-brand-muted: #5f6b85;
   --color-brand-blue-50: #eef6fb;
   --color-brand-blue-100: #d9eaf7;
   --color-brand-blue-200: #b6d4ef;
@@ -31,6 +38,32 @@
 
   body {
     @apply bg-white text-gray-900 antialiased;
+  }
+
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    @apply outline-none;
+  }
+}
+
+@layer components {
+  .focus-ring {
+    @apply focus-visible:ring-2 focus-visible:ring-brand-blue-500/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+  }
+
+  .interactive-card {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  .interactive-card-soft {
+    @apply transition-all duration-300 hover:shadow-lg;
+  }
+
+  .subtle-hover {
+    @apply transition-colors duration-200;
   }
 }
 

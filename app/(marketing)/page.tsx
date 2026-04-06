@@ -74,12 +74,15 @@ export default function HomePage() {
                   Start Free Today
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
-                <button className="group flex items-center gap-2 rounded-full border border-gray-200 bg-white px-8 py-4 text-lg font-medium text-gray-700 transition hover:border-gray-300 hover:text-gray-900">
+                <Link
+                  href="/demo"
+                  className="group flex items-center gap-2 rounded-full border border-gray-200 bg-white px-8 py-4 text-lg font-medium text-gray-700 transition hover:border-gray-300 hover:text-gray-900"
+                >
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-blue-100 transition group-hover:bg-brand-blue-200">
                     <Play className="ml-0.5 h-4 w-4 text-brand-blue-700" />
                   </div>
                   Watch Demo
-                </button>
+                </Link>
               </div>
             </FadeIn>
 

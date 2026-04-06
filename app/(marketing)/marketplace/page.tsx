@@ -183,7 +183,7 @@ export default function MarketplacePage() {
                       </span>
                     </div>
                     <Link
-                      href="#"
+                      href={`/marketplace/${coach.id}`}
                       className="text-sm font-semibold text-brand-orange-600 transition hover:text-brand-orange-700"
                     >
                       View Profile →

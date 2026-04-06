@@ -18,10 +18,10 @@ const footerColumns = [
     title: "Resources",
     links: [
       { label: "Blog", href: "/blog" },
-      { label: "Case Studies", href: "#" },
-      { label: "Help Center", href: "#" },
-      { label: "API Docs", href: "#" },
-      { label: "Webinars", href: "#" },
+      { label: "Case Studies", href: "/case-studies" },
+      { label: "Help Center", href: "/help-center" },
+      { label: "API Docs", href: "/api-docs" },
+      { label: "Webinars", href: "/webinars" },
     ],
   },
   {
@@ -29,9 +29,9 @@ const footerColumns = [
     links: [
       { label: "About Us", href: "/about" },
       { label: "Careers", href: "/careers" },
-      { label: "Press", href: "#" },
+      { label: "Press", href: "/press" },
       { label: "Contact", href: "/contact" },
-      { label: "Partners", href: "#" },
+      { label: "Partners", href: "/partners" },
     ],
   },
   {
@@ -39,9 +39,9 @@ const footerColumns = [
     links: [
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
-      { label: "Cookie Policy", href: "#" },
-      { label: "Security", href: "#" },
-      { label: "GDPR", href: "#" },
+      { label: "Cookie Policy", href: "/cookie-policy" },
+      { label: "Security", href: "/security" },
+      { label: "GDPR", href: "/gdpr" },
     ],
   },
 ];
@@ -81,14 +81,13 @@ export default function Footer() {
             </p>
             <div className="flex gap-3 mt-4">
               {["Twitter", "LinkedIn", "GitHub"].map((social) => (
-                <a
+                <Link
                   key={social}
-                  href="#"
+                  href="/demo"
                   className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition"
-                  title={social}
                 >
                   <Globe className="w-4 h-4 text-gray-400" />
-                </a>
+                </Link>
               ))}
             </div>
           </div>

@@ -121,6 +121,9 @@ export default function Navbar() {
             <Button fullWidth size="sm" asChild>
               <Link href="/signup">Get Started Free</Link>
             </Button>
+            <Button fullWidth variant="outline" size="sm" asChild>
+              <Link href="/demo">Book a Demo</Link>
+            </Button>
           </div>
         </div>
       )}

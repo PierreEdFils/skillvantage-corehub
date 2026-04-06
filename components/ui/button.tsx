@@ -34,7 +34,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     };
 
     const classes = cn(
-      "inline-flex items-center justify-center rounded-full font-semibold transition-all",
+      "focus-ring inline-flex items-center justify-center rounded-full font-semibold transition-all duration-200 active:scale-[0.98] disabled:pointer-events-none disabled:opacity-60",
       variants[variant],
       sizes[size],
       fullWidth && "w-full",
