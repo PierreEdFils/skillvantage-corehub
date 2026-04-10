@@ -1,0 +1,418 @@
+
+thread 'tokio-runtime-worker' (15096) panicked at C:\Users\Administrator\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-1.43.0\src\io\blocking.rs:76:46:
+OS can't spawn worker thread: Insufficient system resources exist to complete the requested service. (os error 1450)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+Error: Can't resolve 'tailwindcss' in 'C:\Users\epier\OneDrive\Documents\SkillVantage'
+    [2m[at finishWithoutResolve (C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'C:\\Users\\epier\\OneDrive\\Documents\\SkillVantage'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in C:\\Users\\epier\\OneDrive\\Documents\\SkillVantage or above\n' +
+    '  resolve as module\n' +
+    "    C:\\Users\\epier\\OneDrive\\Documents\\SkillVantage\\node_modules doesn't exist or is not a directory\n" +
+    "    C:\\Users\\epier\\OneDrive\\Documents\\node_modules doesn't exist or is not a directory\n" +
+    "    C:\\Users\\epier\\OneDrive\\node_modules doesn't exist or is not a directory\n" +
+    "    C:\\Users\\epier\\node_modules doesn't exist or is not a directory\n" +
+    "    C:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    C:\\node_modules doesn't exist or is not a directory"
+}
+
+
+#
+# Fatal process out of memory: Re-embedded builtins: set permissions
+#
+----- Native stack trace -----
+
+ 1: 00007FF6616E0ECD 
+ 2: 00007FF662B42576 
+ 3: 00007FF6623D4D56 
+ 4: 00007FF66223BCFE 
+ 5: 00007FF66226F2DF 
+ 6: 00007FF66226FD92 
+ 7: 00007FF662270772 
+ 8: 00007FF661D6DDC3 
+ 9: 00007FF6623FFEE6 
+10: 00007FF66189A14D 
+11: 00007FF6615F5B73 
+12: 00007FF6615F4F09 
+13: 00007FF6615FEA90 
+14: 00007FF66242A096 
+15: 00007FF6636892B3 
+16: 00007FFB78BEE8D7 BaseThreadInitThunk+23
+17: 00007FFB79D0C40C RtlUserThreadStart+44
+
+<--- Last few GCs --->
+
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+ 1: 00007FF66178C36F node::OnFatalError+1343
+ 2: 00007FF6623D4D77 v8::Function::NewInstance+423
+ 3: 00007FF6621D5467 v8::base::AddressSpaceReservation::AddressSpaceReservation+322071
+ 4: 00007FF66216DE8B v8::platform::DefaultPlatform::CurrentClockTimeMillis+491051
+ 5: 00007FF6621458DE v8::platform::DefaultPlatform::CurrentClockTimeMillis+325758
+ 6: 00007FF6621D7F02 v8::base::AddressSpaceReservation::AddressSpaceReservation+332978
+ 7: 00007FF6621D6EB7 v8::base::AddressSpaceReservation::AddressSpaceReservation+328807
+ 8: 00007FF6621E7E22 v8::internal::StrongRootAllocatorBase::deallocate_impl+15858
+ 9: 00007FF6621E794B v8::internal::StrongRootAllocatorBase::deallocate_impl+14619
+10: 00007FF66366DAED v8::base::UnsignedDivisionByConstant<unsigned __int64>+2791421
+11: 00007FF6621D2F30 v8::base::AddressSpaceReservation::AddressSpaceReservation+312544
+12: 00007FF6621ED7BA X509_STORE_set_cleanup+5098
+13: 00007FF6621F9C56 uv_timer_set_repeat+20694
+14: 00007FF661DCCD47 v8::String::Utf8Value::~Utf8Value+143495
+15: 000001499FE7733A 
+Error: Can't resolve 'tailwindcss' in 'C:\Users\epier\OneDrive\Documents\SkillVantage'
+    [2m[at finishWithoutResolve (C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'C:\\Users\\epier\\OneDrive\\Documents\\SkillVantage'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in C:\\Users\\epier\\OneDrive\\Documents\\SkillVantage or above\n' +
+    '  resolve as module\n' +
+    "    C:\\Users\\epier\\OneDrive\\Documents\\SkillVantage\\node_modules doesn't exist or is not a directory\n" +
+    "    C:\\Users\\epier\\OneDrive\\Documents\\node_modules doesn't exist or is not a directory\n" +
+    "    C:\\Users\\epier\\OneDrive\\node_modules doesn't exist or is not a directory\n" +
+    "    C:\\Users\\epier\\node_modules doesn't exist or is not a directory\n" +
+    "    C:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    C:\\node_modules doesn't exist or is not a directory"
+}
+
+
+#
+# Fatal process out of memory: Re-embedded builtins: set permissions
+#
+----- Native stack trace -----
+
+ 1: 00007FF6616E0ECD node::MultiIsolatePlatform::DisposeIsolate+5341
+ 2: 00007FF662B42576 v8::base::FatalOOM+54
+ 3: 00007FF6623D4D56 v8::Function::NewInstance+390
+ 4: 00007FF66223BCFE v8::CppHeap::CollectGarbageInYoungGenerationForTesting+111438
+ 5: 00007FF66226F2DF SSL_CTX_set_default_read_buffer_len+41247
+ 6: 00007FF66226FD92 SSL_CTX_set_default_read_buffer_len+43986
+ 7: 00007FF662270772 SSL_CTX_set_default_read_buffer_len+46514
+ 8: 00007FF661D6DDC3 v8::internal::Version::GetSONAME+122307
+ 9: 00007FF6623FFEE6 v8::Isolate::Initialize+662
+10: 00007FF66189A14D node::SetIsolateUpForNode+749
+11: 00007FF6615F5B73 RSA_meth_get_flags+222691
+12: 00007FF6615F4F09 RSA_meth_get_flags+219513
+13: 00007FF6615FEA90 RSA_meth_get_flags+259328
+14: 00007FF66242A096 uv_thread_detach+150
+15: 00007FF6636892B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2904003
+16: 00007FFB78BEE8D7 BaseThreadInitThunk+23
+17: 00007FFB79D0C40C RtlUserThreadStart+44
+
+
+
+
+#
+
+
+# Fatal process out of memory: Re-embedded builtins: set permissions
+#
+#
+#
+# Fatal process out of memory: Re-embedded builtins: set permissions
+# Fatal process out of memory: Re-embedded builtins: set permissions
+Error: Can't resolve 'tailwindcss' in 'C:\Users\epier\OneDrive\Documents\SkillVantage'
+    [2m[at finishWithoutResolve (C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (C:\Users\epier\OneDrive\Documents\SkillVantage\skillvantage-corehub\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'C:\\Users\\epier\\OneDrive\\Documents\\SkillVantage'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in C:\\Users\\epier\\OneDrive\\Documents\\SkillVantage or above\n' +
+    '  resolve as module\n' +
+    "    C:\\Users\\epier\\OneDrive\\Documents\\SkillVantage\\node_modules doesn't exist or is not a directory\n" +
+    "    C:\\Users\\epier\\OneDrive\\Documents\\node_modules doesn't exist or is not a directory\n" +
+    "    C:\\Users\\epier\\OneDrive\\node_modules doesn't exist or is not a directory\n" +
+    "    C:\\Users\\epier\\node_modules doesn't exist or is not a directory\n" +
+    "    C:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    C:\\node_modules doesn't exist or is not a directory"
+}
+----- Native stack trace -----
+#
+#
+
+----- Native stack trace -----
+----- Native stack trace -----
+ 1: 00007FF6616E0ECD node::MultiIsolatePlatform::DisposeIsolate+5341
+
+
+ 2: 00007FF662B42576 v8::base::FatalOOM+54
+ 3: 00007FF6623D4D56 v8::Function::NewInstance+390
+ 1: 00007FF6616E0ECD node::MultiIsolatePlatform::DisposeIsolate+5341
+ 1: 00007FF6616E0ECD node::MultiIsolatePlatform::DisposeIsolate+5341
+ 4: 00007FF66223BCFE v8::CppHeap::CollectGarbageInYoungGenerationForTesting+111438
+ 2: 00007FF662B42576 v8::base::FatalOOM+54
+ 2: 00007FF662B42576 v8::base::FatalOOM+54
+ 5: 00007FF66226F2DF SSL_CTX_set_default_read_buffer_len+41247
+ 3: 00007FF6623D4D56 v8::Function::NewInstance+390
+ 3: 00007FF6623D4D56 v8::Function::NewInstance+390
+ 4: 00007FF66223BCFE v8::CppHeap::CollectGarbageInYoungGenerationForTesting+111438
+ 6: 00007FF66226FD92 SSL_CTX_set_default_read_buffer_len+43986
+ 4: 00007FF66223BCFE v8::CppHeap::CollectGarbageInYoungGenerationForTesting+111438
+ 7: 00007FF662270772 SSL_CTX_set_default_read_buffer_len+46514
+ 5: 00007FF66226F2DF SSL_CTX_set_default_read_buffer_len+41247
+ 5: 00007FF66226F2DF SSL_CTX_set_default_read_buffer_len+41247
+ 8: 00007FF661D6DDC3 v8::internal::Version::GetSONAME+122307
+ 6: 00007FF66226FD92 SSL_CTX_set_default_read_buffer_len+43986
+ 6: 00007FF66226FD92 SSL_CTX_set_default_read_buffer_len+43986
+ 9: 00007FF6623FFEE6 v8::Isolate::Initialize+662
+ 7: 00007FF662270772 SSL_CTX_set_default_read_buffer_len+46514
+ 7: 00007FF662270772 SSL_CTX_set_default_read_buffer_len+46514
+10: 00007FF66189A14D node::SetIsolateUpForNode+749
+ 8: 00007FF661D6DDC3 v8::internal::Version::GetSONAME+122307
+ 8: 00007FF661D6DDC3 v8::internal::Version::GetSONAME+122307
+11: 00007FF6615F5B73 RSA_meth_get_flags+222691
+ 9: 00007FF6623FFEE6 v8::Isolate::Initialize+662
+ 9: 00007FF6623FFEE6 v8::Isolate::Initialize+662
+12: 00007FF6615F4F09 RSA_meth_get_flags+219513
+10: 00007FF66189A14D node::SetIsolateUpForNode+749
+10: 00007FF66189A14D node::SetIsolateUpForNode+749
+13: 00007FF6615FEA90 RSA_meth_get_flags+259328
+11: 00007FF6615F5B73 RSA_meth_get_flags+222691
+11: 00007FF6615F5B73 RSA_meth_get_flags+222691
+14: 00007FF66242A096 uv_thread_detach+150
+12: 00007FF6615F4F09 RSA_meth_get_flags+219513
+12: 00007FF6615F4F09 RSA_meth_get_flags+219513
+15: 00007FF6636892B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2904003
+13: 00007FF6615FEA90 RSA_meth_get_flags+259328
+13: 00007FF6615FEA90 RSA_meth_get_flags+259328
+14: 00007FF66242A096 uv_thread_detach+150
+16: 00007FFB78BEE8D7 BaseThreadInitThunk+23
+14: 00007FF66242A096 uv_thread_detach+150
+17: 00007FFB79D0C40C RtlUserThreadStart+44
+15: 00007FF6636892B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2904003
+15: 00007FF6636892B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2904003
+16: 00007FFB78BEE8D7 BaseThreadInitThunk+23
+16: 00007FFB78BEE8D7 BaseThreadInitThunk+23
+17: 00007FFB79D0C40C RtlUserThreadStart+44
+17: 00007FFB79D0C40C RtlUserThreadStart+44
+
+<--- Last few GCs --->
+
+
+
+#
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+#
+----- Native stack trace -----
+
+ 1: 00007FF6616E0ECD node::MultiIsolatePlatform::DisposeIsolate+5341
+ 2: 00007FF662B42576 v8::base::FatalOOM+54
+ 3: 00007FF6623D4D56 v8::Function::NewInstance+390
+ 4: 00007FF6621D5467 v8::base::AddressSpaceReservation::AddressSpaceReservation+322071
+ 5: 00007FF6621876BA v8::base::AddressSpaceReservation::AddressSpaceReservation+3178
+ 6: 00007FF66218777C v8::base::AddressSpaceReservation::AddressSpaceReservation+3372
+ 7: 00007FF66218806B v8::base::AddressSpaceReservation::AddressSpaceReservation+5659
+ 8: 00007FF66215F2C1 v8::platform::DefaultPlatform::CurrentClockTimeMillis+430689
+ 9: 00007FF6621C5173 v8::base::AddressSpaceReservation::AddressSpaceReservation+255779
+10: 00007FF6621C4EDE v8::base::AddressSpaceReservation::AddressSpaceReservation+255118
+11: 00007FF6621C3CC8 v8::base::AddressSpaceReservation::AddressSpaceReservation+250488
+12: 00007FF6621C3C4A v8::base::AddressSpaceReservation::AddressSpaceReservation+250362
+13: 00007FF6621ED6E5 X509_STORE_set_cleanup+4885
+14: 00007FF661D8B498 v8::internal::Version::GetSONAME+242840
+15: 00007FF661D8926C v8::internal::Version::GetSONAME+234092
+16: 00007FF661D904EE v8::internal::Version::GetSONAME+263406
+17: 00007FF661D89C9D v8::internal::Version::GetSONAME+236701
+18: 00007FF6621DD428 v8::base::AddressSpaceReservation::AddressSpaceReservation+354776
+19: 00007FF661D68183 v8::internal::Version::GetSONAME+98691
+20: 00007FF66227037C SSL_CTX_set_default_read_buffer_len+45500
+21: 00007FF662270772 SSL_CTX_set_default_read_buffer_len+46514
+22: 00007FF661D6DDC3 v8::internal::Version::GetSONAME+122307
+23: 00007FF6623FFEE6 v8::Isolate::Initialize+662
+24: 00007FF66189A14D node::SetIsolateUpForNode+749
+25: 00007FF6615F5B73 RSA_meth_get_flags+222691
+26: 00007FF6615F4F09 RSA_meth_get_flags+219513
+27: 00007FF6615FEA90 RSA_meth_get_flags+259328
+28: 00007FF66242A096 uv_thread_detach+150
+29: 00007FF6636892B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2904003
+30: 00007FFB78BEE8D7 BaseThreadInitThunk+23
+31: 00007FFB79D0C40C RtlUserThreadStart+44
+
+
+#
+# Fatal process out of memory: Re-embedded builtins: set permissions
+#
+----- Native stack trace -----
+
+
+
+#
+# Fatal process out of memory: Re-embedded builtins: set permissions
+ 1: 00007FF6616E0ECD node::MultiIsolatePlatform::DisposeIsolate+5341
+#
+ 2: 00007FF662B42576 v8::base::FatalOOM+54
+----- Native stack trace -----
+ 3: 00007FF6623D4D56 v8::Function::NewInstance+390
+
+ 4: 00007FF66223BCFE v8::CppHeap::CollectGarbageInYoungGenerationForTesting+111438
+ 1: 00007FF6616E0ECD node::MultiIsolatePlatform::DisposeIsolate+5341
+ 5: 00007FF66226F2DF SSL_CTX_set_default_read_buffer_len+41247
+ 2: 00007FF662B42576 v8::base::FatalOOM+54
+ 6: 00007FF66226FD92 SSL_CTX_set_default_read_buffer_len+43986
+ 3: 00007FF6623D4D56 v8::Function::NewInstance+390
+ 7: 00007FF662270772 SSL_CTX_set_default_read_buffer_len+46514
+ 4: 00007FF66223BCFE v8::CppHeap::CollectGarbageInYoungGenerationForTesting+111438
+
+ 8: 00007FF661D6DDC3 v8::internal::Version::GetSONAME+122307
+
+ 5: 00007FF66226F2DF SSL_CTX_set_default_read_buffer_len+41247
+ 9: 00007FF6623FFEE6 v8::Isolate::Initialize+662
+<--- Last few GCs --->
+<--- Last few GCs --->
+ 6: 00007FF66226FD92 SSL_CTX_set_default_read_buffer_len+43986
+10: 00007FF66189A14D node::SetIsolateUpForNode+749
+
+
+ 7: 00007FF662270772 SSL_CTX_set_default_read_buffer_len+46514
+11: 00007FF6615F5B73 RSA_meth_get_flags+222691
+[31424:000001D4F7973000]      237 ms: Scavenge 8.7 (11.3) -> 7.4 (11.3) MB, pooled: 0 MB, 1.28 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+ 8: 00007FF661D6DDC3 v8::internal::Version::GetSONAME+122307
+12: 00007FF6615F4F09 RSA_meth_get_flags+219513
+[31424:000001D4F7973000]      271 ms: Scavenge 9.5 (12.3) -> 8.8 (17.3) MB, pooled: 0 MB, 1.99 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+----- Native stack trace -----
+ 9: 00007FF6623FFEE6 v8::Isolate::Initialize+662
+13: 00007FF6615FEA90 RSA_meth_get_flags+259328
+
+
+10: 00007FF66189A14D node::SetIsolateUpForNode+749
+14: 00007FF66242A096 uv_thread_detach+150
+FATAL ERROR: Zone Allocation failed - process out of memory
+11: 00007FF6615F5B73 RSA_meth_get_flags+222691
+15: 00007FF6636892B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2904003
+----- Native stack trace -----
+12: 00007FF6615F4F09 RSA_meth_get_flags+219513
+16: 00007FFB78BEE8D7 BaseThreadInitThunk+23
+
+13: 00007FF6615FEA90 RSA_meth_get_flags+259328
+17: 00007FFB79D0C40C RtlUserThreadStart+44
+ 1: 00007FF66178C36F 
+14: 00007FF66242A096 uv_thread_detach+150
+ 1: 00007FF66178C36F node::OnFatalError+1343
+ 2: 00007FF6623D4D77 
+15: 00007FF6636892B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2904003
+ 3: 00007FF661D4FBD6 
+ 2: 00007FF6623D4D77 v8::Function::NewInstance+423
+16: 00007FFB78BEE8D7 BaseThreadInitThunk+23
+ 4: 00007FF662B654D6 
+ 3: 00007FF6621D5467 v8::base::AddressSpaceReservation::AddressSpaceReservation+322071
+17: 00007FFB79D0C40C RtlUserThreadStart+44
+ 5: 00007FF662B6F7BB 
+ 4: 00007FF66216DE8B v8::platform::DefaultPlatform::CurrentClockTimeMillis+491051
+ 6: 00007FF661B7DB41 
+ 5: 00007FF6621458DE v8::platform::DefaultPlatform::CurrentClockTimeMillis+325758
+ 7: 00007FF661C27AD3 
+ 6: 00007FF6621D7F02 v8::base::AddressSpaceReservation::AddressSpaceReservation+332978
+ 8: 00007FF661C259DA 
+ 7: 00007FF6621D6EB7 v8::base::AddressSpaceReservation::AddressSpaceReservation+328807
+ 9: 00007FF6623489AF 
+ 8: 00007FF6621E7E22 v8::internal::StrongRootAllocatorBase::deallocate_impl+15858
+10: 00007FF661C274BB 
+ 9: 00007FF6621E794B v8::internal::StrongRootAllocatorBase::deallocate_impl+14619
+11: 00007FF662BB570F 
+10: 00007FF66366DAED v8::base::UnsignedDivisionByConstant<unsigned __int64>+2791421
+12: 00007FF6616DCD8E 
+11: 00007FF6621D2F30 v8::base::AddressSpaceReservation::AddressSpaceReservation+312544
+13: 00007FF66242A096 
+12: 00007FF6621ED7BA X509_STORE_set_cleanup+5098
+14: 00007FF6636892B3 
+13: 00007FF6621F9C56 uv_timer_set_repeat+20694
+15: 00007FFB78BEE8D7 
+14: 00007FF661DCCD47 v8::String::Utf8Value::~Utf8Value+143495
+16: 00007FFB79D0C40C 
+15: 00000247D7E7733A 
+
+
+
+#
+
+# Fatal process out of memory: Re-embedded builtins: set permissions
+#
+# Fatal process out of memory: Re-embedded builtins: set permissions
+#
+#
+----- Native stack trace -----
+----- Native stack trace -----
+
+
+ 1: 00007FF6616E0ECD node::MultiIsolatePlatform::DisposeIsolate+5341
+ 2: 00007FF662B42576 v8::base::FatalOOM+54
+ 3: 00007FF6623D4D56 v8::Function::NewInstance+390
+ 4: 00007FF66223BCFE v8::CppHeap::CollectGarbageInYoungGenerationForTesting+111438
+ 5: 00007FF66226F2DF SSL_CTX_set_default_read_buffer_len+41247
+ 6: 00007FF66226FD92 SSL_CTX_set_default_read_buffer_len+43986
+ 7: 00007FF662270772 SSL_CTX_set_default_read_buffer_len+46514
+ 8: 00007FF661D6DDC3 v8::internal::Version::GetSONAME+122307
+ 9: 00007FF6623FFEE6 v8::Isolate::Initialize+662
+10: 00007FF66189A14D node::SetIsolateUpForNode+749
+11: 00007FF6615F5B73 RSA_meth_get_flags+222691
+12: 00007FF6615F4F09 RSA_meth_get_flags+219513
+13: 00007FF6615FEA90 RSA_meth_get_flags+259328
+14: 00007FF66242A096 uv_thread_detach+150
+15: 00007FF6636892B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2904003
+16: 00007FFB78BEE8D7 BaseThreadInitThunk+23
+17: 00007FFB79D0C40C RtlUserThreadStart+44
+ 1: 00007FF6616E0ECD node::MultiIsolatePlatform::DisposeIsolate+5341
+ 2: 00007FF662B42576 v8::base::FatalOOM+54
+ 3: 00007FF6623D4D56 v8::Function::NewInstance+390
+ 4: 00007FF66223BCFE v8::CppHeap::CollectGarbageInYoungGenerationForTesting+111438
+ 5: 00007FF66226F2DF SSL_CTX_set_default_read_buffer_len+41247
+ 6: 00007FF66226FD92 SSL_CTX_set_default_read_buffer_len+43986
+ 7: 00007FF662270772 SSL_CTX_set_default_read_buffer_len+46514
+ 8: 00007FF661D6DDC3 v8::internal::Version::GetSONAME+122307
+ 9: 00007FF6623FFEE6 v8::Isolate::Initialize+662
+10: 00007FF66189A14D node::SetIsolateUpForNode+749
+11: 00007FF6615F5B73 RSA_meth_get_flags+222691
+12: 00007FF6615F4F09 RSA_meth_get_flags+219513
+13: 00007FF6615FEA90 RSA_meth_get_flags+259328
+14: 00007FF66242A096 uv_thread_detach+150
+15: 00007FF6636892B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2904003
+16: 00007FFB78BEE8D7 BaseThreadInitThunk+23
+17: 00007FFB79D0C40C RtlUserThreadStart+44
+
+
+#
+# Fatal process out of memory: Re-embedded builtins: set permissions
+#
+----- Native stack trace -----
+
+ 1: 00007FF6616E0ECD 
+ 2: 00007FF662B42576 
+ 3: 00007FF6623D4D56 
+ 4: 00007FF66223BCFE 
+ 5: 00007FF66226F2DF 
+ 6: 00007FF66226FD92 
+ 7: 00007FF662270772 
+ 8: 00007FF661D6DDC3 
+ 9: 00007FF6623FFEE6 
+10: 00007FF66189A14D 
+11: 00007FF6615F5B73 
+12: 00007FF6615F4F09 
+13: 00007FF6615FEA90 
+14: 00007FF66242A096 
+15: 00007FF6636892B3 
+16: 00007FFB78BEE8D7 BaseThreadInitThunk+23
+17: 00007FFB79D0C40C RtlUserThreadStart+44

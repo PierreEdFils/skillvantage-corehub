@@ -48,7 +48,7 @@ const footerColumns = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-slate-950 py-16 text-slate-400">
+    <footer className="border-t border-gray-100 bg-white py-16 text-gray-600">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-12 grid grid-cols-2 gap-8 md:grid-cols-5">
           <div className="col-span-2 md:col-span-1">
@@ -77,7 +77,7 @@ export default function Footer() {
               </span>
             </Link>
 
-            <p className="text-sm leading-relaxed text-slate-400">
+            <p className="text-sm leading-relaxed text-gray-600">
               {SITE_CONFIG.description}
             </p>
 
@@ -86,10 +86,10 @@ export default function Footer() {
                 <Link
                   key={social}
                   href="/demo"
-                  className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-900 transition hover:bg-slate-800"
+                  className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 transition hover:bg-gray-200"
                   aria-label={social}
                 >
-                  <Globe className="h-4 w-4 text-slate-300" />
+                  <Globe className="h-4 w-4 text-gray-700" />
                 </Link>
               ))}
             </div>
@@ -97,13 +97,13 @@ export default function Footer() {
 
           {footerColumns.map((column) => (
             <div key={column.title}>
-              <h4 className="mb-4 text-sm font-semibold text-white">{column.title}</h4>
+              <h4 className="mb-4 text-sm font-semibold text-gray-900">{column.title}</h4>
               <ul className="space-y-2">
                 {column.links.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm transition hover:text-white"
+                      className="text-sm text-gray-600 transition hover:text-gray-900"
                     >
                       {link.label}
                     </Link>
@@ -114,12 +114,12 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-slate-800 pt-8 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 md:flex-row">
           <p className="text-sm">
             © 2026 {SITE_CONFIG.name}. All rights reserved.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 text-xs">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-gray-600">
             <span className="flex items-center gap-1">
               <Shield className="h-3 w-3" />
               SOC2 Ready

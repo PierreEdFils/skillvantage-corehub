@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import Button from "@/components/ui/button";
 import { NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -13,6 +12,8 @@ export default function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const primaryLink = NAV_LINKS.find((link) => link.primary);
+  const navLinks = NAV_LINKS.filter((link) => !link.primary);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -30,12 +31,79 @@ export default function Header() {
         scrolled ? "bg-white/95 shadow-sm backdrop-blur" : "bg-white/90 backdrop-blur"
       )}
     >
-      <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between gap-4 px-4 py-3 lg:px-5">
+      <div className="mx-auto flex w-full max-w-[1440px] items-center px-4 py-3 lg:px-6">
+        <div className="hidden w-full grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-6 md:grid">
+          <div className="flex min-w-0 justify-self-start pr-4">
+            <Link
+              href="/"
+              aria-label="SkillVantage CoreHub home"
+              onClick={() => setMobileOpen(false)}
+              className="flex shrink-0 -translate-y-1 items-center gap-1.5 sm:gap-2 lg:-ml-2"
+            >
+              <Image
+                src="/skillvantage_logo.png"
+                alt="SkillVantage Enterprise"
+                width={585}
+                height={239}
+                priority
+                className="h-10 w-auto object-contain sm:h-12 lg:h-14"
+              />
+              <span className="relative inline-flex pb-1 text-brand-orange-500">
+                <span className="text-[1.7rem] font-black uppercase leading-none tracking-[-0.05em] sm:text-[1.95rem]">
+                  CORE
+                </span>
+                <span className="absolute bottom-[0.16rem] right-[-1.48rem] text-[0.82rem] font-extrabold leading-none sm:bottom-[0.18rem] sm:right-[-1.68rem] sm:text-[0.92rem]">
+                  Hub
+                </span>
+                <span className="absolute right-[-2.02rem] top-[0.08rem] text-[0.44rem] font-bold leading-none sm:right-[-2.28rem] sm:top-[0.1rem] sm:text-[0.5rem]">
+                  TM
+                </span>
+              </span>
+            </Link>
+          </div>
+
+          <nav className="flex items-center justify-center gap-7 justify-self-center">
+            {navLinks.map((link) => {
+              const active =
+                pathname === link.href ||
+                (link.href !== "/" && pathname?.startsWith(`${link.href}/`));
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={cn(
+                    "whitespace-nowrap text-sm transition",
+                    active
+                      ? "font-semibold text-brand-orange-500"
+                      : "text-gray-600 hover:text-gray-900"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </nav>
+
+          <div className="flex min-w-0 justify-self-end pl-4">
+            {primaryLink ? (
+              <Link
+                href={primaryLink.href}
+                onClick={() => setMobileOpen(false)}
+                className="whitespace-nowrap rounded-full bg-brand-orange-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-orange-200 transition hover:bg-brand-orange-600"
+              >
+                {primaryLink.label}
+              </Link>
+            ) : null}
+          </div>
+        </div>
+
         <Link
           href="/"
           aria-label="SkillVantage CoreHub home"
           onClick={() => setMobileOpen(false)}
-          className="flex shrink-0 -translate-y-1 items-center gap-1.5 sm:gap-2 lg:-ml-2"
+          className="flex shrink-0 -translate-y-1 items-center gap-1.5 sm:gap-2 md:hidden"
         >
           <Image
             src="/skillvantage_logo.png"
@@ -43,7 +111,7 @@ export default function Header() {
             width={585}
             height={239}
             priority
-            className="h-10 w-auto object-contain sm:h-12 lg:h-14"
+            className="h-10 w-auto object-contain sm:h-12"
           />
           <span className="relative inline-flex pb-1 text-brand-orange-500">
             <span className="text-[1.7rem] font-black uppercase leading-none tracking-[-0.05em] sm:text-[1.95rem]">
@@ -57,45 +125,6 @@ export default function Header() {
             </span>
           </span>
         </Link>
-
-        <nav className="hidden flex-1 items-center justify-center gap-6 pl-10 md:flex lg:pl-16">
-          {NAV_LINKS.map((link) => {
-            const active =
-              pathname === link.href ||
-              (link.href !== "/" && pathname?.startsWith(`${link.href}/`));
-
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className={cn(
-                  "text-sm transition",
-                  active
-                    ? "font-semibold text-brand-orange-500"
-                    : "text-gray-600 hover:text-gray-900"
-                )}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
-        </nav>
-
-        <div className="hidden items-center gap-3 md:flex">
-          <Link
-            href="/login"
-            className="whitespace-nowrap px-3 py-2 text-sm font-medium text-gray-700 transition hover:text-gray-900"
-          >
-            Log in
-          </Link>
-          <Button size="sm" asChild>
-            <Link href="/signup">Get Started Free</Link>
-          </Button>
-          <Button variant="outline" size="sm" asChild className="hidden lg:inline-flex">
-            <Link href="/demo">Book a Demo</Link>
-          </Button>
-        </div>
 
         <div className="flex items-center gap-2 md:hidden">
           <button
@@ -116,31 +145,19 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={() => setMobileOpen(false)}
                 className={cn(
                   "block rounded-2xl px-3 py-2 text-sm transition",
-                  pathname === link.href
-                    ? "bg-brand-orange-50 font-semibold text-brand-orange-600"
-                    : "text-gray-700 hover:bg-gray-50"
+                  link.primary
+                    ? "bg-brand-orange-500 text-center font-semibold text-white"
+                    : pathname === link.href
+                      ? "bg-brand-orange-50 font-semibold text-brand-orange-600"
+                      : "text-gray-700 hover:bg-gray-50"
                 )}
               >
                 {link.label}
               </Link>
             ))}
-          </div>
-
-          <div className="mt-4 space-y-2 border-t border-gray-100 pt-4">
-            <Link
-              href="/login"
-              className="block rounded-2xl px-3 py-2 text-sm text-gray-700 transition hover:bg-gray-50"
-            >
-              Log in
-            </Link>
-            <Button fullWidth size="sm" asChild>
-              <Link href="/signup">Get Started Free</Link>
-            </Button>
-            <Button fullWidth variant="outline" size="sm" asChild>
-              <Link href="/demo">Book a Demo</Link>
-            </Button>
           </div>
         </div>
       )}

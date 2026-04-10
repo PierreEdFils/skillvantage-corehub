@@ -6,12 +6,12 @@ export const SITE_CONFIG = {
 };
 
 export const NAV_LINKS = [
-  { href: "/marketplace", label: "Marketplace" },
-  { href: "/for-coaches", label: "For Coaches" },
-  { href: "/for-employers", label: "For Employers" },
-  { href: "/for-professionals", label: "For Professionals" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/about", label: "About" }
+  { href: "/", label: "Home" },
+  { href: "/coaching-products", label: "Coaching Products" },
+  { href: "/upskilling-bridge-lms", label: "Upskilling Bridge (LMS)" },
+  { href: "/coachhub", label: "CoachHub" },
+  { href: "/nova-coaching-framework", label: "NOVA Coaching Framework" },
+  { href: "/signup", label: "Get Started", primary: true }
 ];
 
 export const STATS = [

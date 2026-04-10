@@ -1,19 +1,12 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Link from "next/link";
 import {
   ArrowRight,
-  BookOpen,
   Brain,
-  Briefcase,
   CheckCircle2,
-  ChevronRight,
   GraduationCap,
   LayoutDashboard,
   LineChart,
   MessageSquare,
-  Play,
   Shield,
   Sparkles,
   Star,
@@ -25,95 +18,108 @@ import FadeIn from "@/components/shared/fade-in";
 import AnimatedCounter from "@/components/shared/animated-counter";
 import SectionHeader from "@/components/shared/section-header";
 import { STATS, TESTIMONIALS } from "@/lib/constants";
-import { useState } from "react";
 
 export default function HomePage() {
-  const [activePersona, setActivePersona] = useState<
-    "coach" | "professional" | "employer"
-  >("coach");
-
   return (
     <main className="min-h-screen bg-white">
       {/* HERO */}
-      <section className="relative overflow-hidden pb-20 pt-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-blue-50 via-white to-brand-orange-50" />
-        <div className="absolute left-1/4 top-20 h-96 w-96 rounded-full bg-brand-blue-200/30 blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 h-80 w-80 rounded-full bg-brand-orange-200/30 blur-3xl" />
+      <section className="relative overflow-hidden pb-16 pt-24">
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-blue-200 via-brand-blue-100 to-brand-blue-50" />
+        <div className="absolute left-1/4 top-20 h-96 w-96 rounded-full bg-brand-blue-400/35 blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 h-80 w-80 rounded-full bg-brand-blue-300/25 blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-4xl text-center">
             <FadeIn>
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-brand-blue-100 px-4 py-1.5 text-sm font-medium text-brand-blue-700">
-                <Zap className="h-4 w-4" />
-                The Future of Workforce Development
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-brand-blue-100 px-3 py-1 text-xs font-medium text-brand-blue-700 sm:text-sm">
+                <Zap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                <span>Coaching Optimization &amp; Resource Ecosystem: Human Upskilling Bridge</span>
+                <span className="relative inline-flex pb-1 text-brand-orange-500">
+                  <span className="text-[0.95rem] font-black uppercase leading-none tracking-[-0.05em] sm:text-[1.05rem]">
+                    CORE
+                  </span>
+                  <span className="absolute bottom-[0.08rem] right-[-0.85rem] text-[0.46rem] font-extrabold leading-none sm:bottom-[0.1rem] sm:right-[-0.94rem] sm:text-[0.52rem]">
+                    Hub
+                  </span>
+                  <span className="absolute right-[-1.16rem] top-[0.04rem] text-[0.26rem] font-bold leading-none sm:right-[-1.28rem] sm:top-[0.05rem] sm:text-[0.3rem]">
+                    TM
+                  </span>
+                </span>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.1}>
-              <h1 className="text-5xl font-extrabold leading-[1.1] tracking-tight text-gray-900 md:text-7xl">
-                The Operating System
-                <br />
-                <span className="gradient-text">for Talent Growth</span>
+              <h1
+                className="text-[2rem] font-medium italic leading-[1.15] text-gray-900 md:text-[2.35rem] lg:text-[2.7rem]"
+                style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
+              >
+                <span className="gradient-text">
+                  Where Talent Grows, Coaches Scale, and Organizations Thrive
+                </span>
               </h1>
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <p className="mx-auto mt-6 max-w-2xl text-xl leading-relaxed text-gray-600">
-                Connecting coaches, professionals, and employers through one
-                intelligent platform. Scale coaching businesses, develop
-                careers, and build unstoppable teams.
+              <p
+                className="mx-auto mt-5 max-w-2xl text-gray-600"
+                style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
+              >
+                <span className="block text-[1.15rem] font-medium leading-[1.3] md:text-[1.25rem]">
+                  Welcome to COREHUB™
+                </span>
+                <span className="block text-[1.15rem] font-normal leading-[1.3] md:text-[1.25rem]">
+                  SkillVantage&apos;s Coaching &amp; Learning Management Platform
+                </span>
+                <br />
+                <span className="block text-[1.5rem] font-bold leading-[1.25] md:text-[1.75rem]">
+                  Your all-in-one ecosystem for coaching,
+                </span>
+                <span className="block text-[1.5rem] font-bold leading-[1.25] md:text-[1.75rem]">
+                  skill development, and workforce transformation.
+                </span>
+                <br />
+                <span className="block text-[1.02rem] font-normal leading-[1.35] md:text-[1.08rem]">
+                  COREHUB™ seamlessly connects coaches, professionals, and employers through a single intelligent platform:
+                </span>
+                <span className="block text-[1.02rem] font-normal leading-[1.35] md:text-[1.08rem]">
+                  Coaches scale and monetize their expertise within a dynamic marketplace;
+                </span>
+                <span className="block text-[1.02rem] font-normal leading-[1.35] md:text-[1.08rem]">
+                  Professionals build critical skills, advance careers, and unlock new opportunities and
+                </span>
+                <span className="block text-[1.02rem] font-normal leading-[1.35] md:text-[1.08rem]">
+                  Employers strengthen, upskill, and future-proof their workforce
+                </span>
+                <br />
+                <span className="block text-[1.08rem] font-medium leading-[1.35] md:text-[1.15rem]">
+                  Powered by AI-driven analytics and proven development methodologies,
+                </span>
+                <span className="block text-[1.08rem] font-normal leading-[1.35] md:text-[1.15rem]">
+                  COREHUB™ delivers personalized coaching, measurable growth, and enterprise-level talent insights.
+                </span>
               </p>
             </FadeIn>
 
             <FadeIn delay={0.3}>
-              <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <div className="mt-8 grid w-full max-w-3xl grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 mx-auto">
                 <Link
-                  href="/signup"
-                  className="group flex items-center gap-2 rounded-full bg-brand-orange-500 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-brand-orange-200 transition-all hover:bg-brand-orange-600"
+                  href="/nova-coaching-framework"
+                  className="group flex min-h-[84px] items-center justify-center rounded-3xl bg-brand-orange-500 px-6 py-4 text-center text-base font-semibold text-white shadow-xl shadow-brand-orange-200 transition-all hover:bg-brand-orange-600"
                 >
-                  Start Free Today
-                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  <span className="max-w-[14ch] text-balance leading-tight">
+                    NOVA™ Coaching Framework
+                  </span>
                 </Link>
                 <Link
-                  href="/demo"
-                  className="group flex items-center gap-2 rounded-full border border-gray-200 bg-white px-8 py-4 text-lg font-medium text-gray-700 transition hover:border-gray-300 hover:text-gray-900"
+                  href="/pricing"
+                  className="group flex min-h-[84px] items-center justify-center rounded-3xl border border-gray-200 bg-white px-6 py-4 text-center text-base font-semibold text-gray-700 transition hover:border-gray-300 hover:text-gray-900"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-blue-100 transition group-hover:bg-brand-blue-200">
-                    <Play className="ml-0.5 h-4 w-4 text-brand-blue-700" />
-                  </div>
-                  Watch Demo
+                  <span className="leading-tight">Pricing Strategy</span>
+                  <ArrowRight className="ml-2 h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
             </FadeIn>
 
-            <FadeIn delay={0.4}>
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
-                <Link
-                  href="/for-coaches"
-                  className="flex items-center gap-1 transition hover:text-brand-orange-600"
-                >
-                  <BookOpen className="h-4 w-4" />
-                  I&apos;m a Coach
-                  <ChevronRight className="h-3 w-3" />
-                </Link>
-                <Link
-                  href="/for-professionals"
-                  className="flex items-center gap-1 transition hover:text-brand-orange-600"
-                >
-                  <GraduationCap className="h-4 w-4" />
-                  I&apos;m a Professional
-                  <ChevronRight className="h-3 w-3" />
-                </Link>
-                <Link
-                  href="/for-employers"
-                  className="flex items-center gap-1 transition hover:text-brand-orange-600"
-                >
-                  <Briefcase className="h-4 w-4" />
-                  I&apos;m an Employer
-                  <ChevronRight className="h-3 w-3" />
-                </Link>
-              </div>
-            </FadeIn>
           </div>
 
           {/* DASHBOARD PREVIEW */}
@@ -233,190 +239,6 @@ export default function HomePage() {
               </FadeIn>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* PERSONA TABS */}
-      <section className="bg-gray-50 py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mb-16 text-center">
-            <h2 className="text-4xl font-extrabold text-gray-900 md:text-5xl">
-              One Platform, <span className="gradient-text">Three Superpowers</span>
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-xl text-gray-500">
-              Whether you coach, learn, or hire — SkillVantage is built for you.
-            </p>
-          </div>
-
-          <div className="mb-12 flex flex-wrap justify-center gap-2">
-            {[
-              { id: "coach" as const, label: "For Coaches", icon: BookOpen },
-              { id: "professional" as const, label: "For Professionals", icon: GraduationCap },
-              { id: "employer" as const, label: "For Employers", icon: Briefcase }
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActivePersona(tab.id)}
-                className={`flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all ${
-                  activePersona === tab.id
-                    ? "bg-brand-orange-500 text-white shadow-lg shadow-brand-orange-200"
-                    : "border border-gray-200 bg-white text-gray-600 hover:bg-gray-100"
-                }`}
-              >
-                <tab.icon className="h-4 w-4" />
-                {tab.label}
-              </button>
-            ))}
-          </div>
-
-          <motion.div
-            key={activePersona}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-          >
-            {activePersona === "coach" && (
-              <div className="grid items-center gap-12 md:grid-cols-2">
-                <div>
-                  <h3 className="mb-4 text-3xl font-bold text-gray-900">
-                    Grow Your Coaching Business
-                  </h3>
-                  <p className="mb-8 text-lg text-gray-600">
-                    Reach thousands of professionals, manage your schedule, build
-                    courses, and earn more — all from one beautiful dashboard.
-                  </p>
-                  <div className="space-y-4">
-                    {[
-                      "Build & sell courses and group programs",
-                      "Smart scheduling with calendar sync",
-                      "Automated client progress tracking",
-                      "Built-in payments",
-                      "Marketing tools & client acquisition",
-                      "Analytics to grow your revenue"
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-start gap-3">
-                        <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-emerald-500" />
-                        <span className="text-gray-700">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-xl">
-                  <div className="mb-6 flex items-center justify-between">
-                    <h4 className="font-bold text-gray-900">Coach Dashboard</h4>
-                    <span className="rounded-full bg-emerald-100 px-2 py-1 text-xs text-emerald-700">
-                      Live
-                    </span>
-                  </div>
-                  <div className="grid grid-cols-2 gap-3">
-                    {[
-                      { label: "Revenue", value: "\$8,420" },
-                      { label: "Clients", value: "47" },
-                      { label: "Sessions", value: "6" },
-                      { label: "Rating", value: "4.9 ⭐" }
-                    ].map((item, i) => (
-                      <div key={i} className="rounded-xl bg-brand-blue-50 p-4">
-                        <p className="text-xs text-gray-500">{item.label}</p>
-                        <p className="text-2xl font-bold text-gray-900">{item.value}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {activePersona === "professional" && (
-              <div className="grid items-center gap-12 md:grid-cols-2">
-                <div>
-                  <h3 className="mb-4 text-3xl font-bold text-gray-900">
-                    Accelerate Your Career
-                  </h3>
-                  <p className="mb-8 text-lg text-gray-600">
-                    Get matched with world-class coaches, learn in-demand skills,
-                    earn credentials, and unlock new career opportunities.
-                  </p>
-                  <div className="space-y-4">
-                    {[
-                      "AI-powered coach matching",
-                      "Personalized learning paths",
-                      "Certificates and badges",
-                      "1:1 and group sessions",
-                      "Peer community",
-                      "Job opportunities"
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-start gap-3">
-                        <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-emerald-500" />
-                        <span className="text-gray-700">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-xl">
-                  <div className="mb-6 flex items-center justify-between">
-                    <h4 className="font-bold text-gray-900">Learning Dashboard</h4>
-                    <span className="rounded-full bg-orange-100 px-2 py-1 text-xs text-orange-700">
-                      🔥 12-day streak
-                    </span>
-                  </div>
-                  <div className="rounded-xl bg-gradient-to-r from-brand-blue-700 to-brand-orange-500 p-4 text-white">
-                    <p className="text-sm opacity-80">Current Path</p>
-                    <p className="mt-1 text-lg font-bold">Leadership & Management</p>
-                    <div className="mt-3 h-2 rounded-full bg-white/20">
-                      <div className="h-2 w-[68%] rounded-full bg-white" />
-                    </div>
-                    <p className="mt-2 text-xs opacity-80">68% complete</p>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {activePersona === "employer" && (
-              <div className="grid items-center gap-12 md:grid-cols-2">
-                <div>
-                  <h3 className="mb-4 text-3xl font-bold text-gray-900">
-                    Build an Unstoppable Workforce
-                  </h3>
-                  <p className="mb-8 text-lg text-gray-600">
-                    Identify skill gaps, assign learning paths, track ROI, and
-                    reduce turnover with data-driven talent development.
-                  </p>
-                  <div className="space-y-4">
-                    {[
-                      "Skill gap analysis",
-                      "Learning path assignment",
-                      "Team reporting",
-                      "Bulk seat management",
-                      "ROI dashboards",
-                      "Dedicated customer success"
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-start gap-3">
-                        <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-emerald-500" />
-                        <span className="text-gray-700">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-xl">
-                  <div className="mb-6 flex items-center justify-between">
-                    <h4 className="font-bold text-gray-900">Employer Dashboard</h4>
-                    <span className="rounded-full bg-blue-100 px-2 py-1 text-xs text-blue-700">
-                      Enterprise
-                    </span>
-                  </div>
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="rounded-xl bg-emerald-50 p-4">
-                      <p className="text-xs text-gray-500">Team Members</p>
-                      <p className="text-2xl font-bold text-gray-900">248</p>
-                    </div>
-                    <div className="rounded-xl bg-blue-50 p-4">
-                      <p className="text-xs text-gray-500">Training ROI</p>
-                      <p className="text-2xl font-bold text-gray-900">340%</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-          </motion.div>
         </div>
       </section>
 
