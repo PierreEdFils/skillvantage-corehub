@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import DashboardShell from "@/components/dashboard/dashboard-shell";
 import MetricGrid from "@/components/dashboard/metric-grid";
@@ -11,7 +12,7 @@ import Card from "@/components/ui/card";
 import ProgressBar from "@/components/ui/progress-bar";
 import { EMPLOYER_DASHBOARD_DATA } from "@/lib/mock-data";
 
-export default function EmployerDashboardPage() {
+function EmployerDashboardContent() {
   const searchParams = useSearchParams();
   const tab = searchParams.get("tab") || "";
   const AlertIcon = EMPLOYER_DASHBOARD_DATA.aiInsight.icon;
@@ -254,5 +255,13 @@ export default function EmployerDashboardPage() {
         </div>
       )}
     </DashboardShell>
+  );
+}
+
+export default function EmployerDashboardPage() {
+  return (
+    <Suspense fallback={null}>
+      <EmployerDashboardContent />
+    </Suspense>
   );
 }

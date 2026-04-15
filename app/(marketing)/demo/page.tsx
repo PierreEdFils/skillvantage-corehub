@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import FadeIn from "@/components/shared/fade-in";
 import Button from "@/components/ui/button";
 import Input from "@/components/ui/input";
 import Textarea from "@/components/ui/textarea";
 
-export default function DemoPage() {
+function DemoPageContent() {
   const searchParams = useSearchParams();
   const coach = searchParams.get("coach");
   const source = searchParams.get("source");
@@ -124,5 +124,13 @@ export default function DemoPage() {
         </div>
       </section>
     </main>
+  );
+}
+
+export default function DemoPage() {
+  return (
+    <Suspense fallback={null}>
+      <DemoPageContent />
+    </Suspense>
   );
 }

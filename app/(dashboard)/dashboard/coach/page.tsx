@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { Star } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import DashboardShell from "@/components/dashboard/dashboard-shell";
@@ -11,7 +12,7 @@ import Badge from "@/components/ui/badge";
 import Card from "@/components/ui/card";
 import { COACH_DASHBOARD_DATA } from "@/lib/mock-data";
 
-export default function CoachDashboardPage() {
+function CoachDashboardContent() {
   const searchParams = useSearchParams();
   const tab = searchParams.get("tab") || "";
 
@@ -197,5 +198,13 @@ export default function CoachDashboardPage() {
         </div>
       )}
     </DashboardShell>
+  );
+}
+
+export default function CoachDashboardPage() {
+  return (
+    <Suspense fallback={null}>
+      <CoachDashboardContent />
+    </Suspense>
   );
 }

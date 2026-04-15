@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import Link from "next/link";
 import { Sparkles } from "lucide-react";
 import { useSearchParams } from "next/navigation";
@@ -14,7 +15,7 @@ import Button from "@/components/ui/button";
 import Card from "@/components/ui/card";
 import { PROFESSIONAL_DASHBOARD_DATA } from "@/lib/mock-data";
 
-export default function ProfessionalDashboardPage() {
+function ProfessionalDashboardContent() {
   const searchParams = useSearchParams();
   const tab = searchParams.get("tab") || "";
 
@@ -209,5 +210,13 @@ export default function ProfessionalDashboardPage() {
         </div>
       )}
     </DashboardShell>
+  );
+}
+
+export default function ProfessionalDashboardPage() {
+  return (
+    <Suspense fallback={null}>
+      <ProfessionalDashboardContent />
+    </Suspense>
   );
 }
